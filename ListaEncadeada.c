@@ -19,7 +19,7 @@ node_t* criaNo(long int cod, char nome[], unsigned int idade, char brasileiro, d
 	no->idade = idade;
 	no->brasileiro = brasileiro;
 	no->salario = salario;
-	no-prox = NULL;
+	no->prox = NULL;
 	return no;
 }
 
@@ -43,7 +43,7 @@ void retira(long int cod) {
 	if (p->cod == cod) {
 		cabeca = p->prox;
 		free(p);
-		return NULL;
+		return;
 	}
 	while (p != NULL && p->cod != cod) {
 		q = p;
@@ -54,3 +54,6 @@ void retira(long int cod) {
 		free(p);
 	}
 }
+
+int main() {}
+
