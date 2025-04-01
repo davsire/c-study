@@ -74,7 +74,6 @@ int main(int argc, char **argv) {
     int num_zeros;       // Numero de zeros requeridos no final do hash
     int num_threads;
     int i;
-    pthread_t threads[num_threads];
 
     if (argc < 2) {
 	    printf("Digite %s num_zeros\n", argv[0]);
@@ -88,6 +87,7 @@ int main(int argc, char **argv) {
 
     num_zeros = atoi(argv[1]);
     num_threads = atoi(argv[2]);
+    pthread_t threads[num_threads];
 
     printf("Executando PoW ...\n");
     gettimeofday(&t1, NULL);
