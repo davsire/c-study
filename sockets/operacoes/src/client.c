@@ -42,4 +42,5 @@ int main() {
   mensagem_t* resposta = desserializar_mensagem(buffer);
 
   printf("Resultado da operação: %d\n", resposta->dados[0]);
+  close(sockfd);
 }
